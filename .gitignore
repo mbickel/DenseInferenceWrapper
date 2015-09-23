@@ -1,0 +1,12 @@
+.idea
+.project
+.cproject
+.settings
+
+*.pyc
+
+*.o
+*.so
+*.a
+
+*~
