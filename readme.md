@@ -53,25 +53,25 @@ from denseinference import CRFProcessor
 pro = CRFProcessor.CRF3DProcessor()
 ```
 
-**param max_iterations**: maximum crf iterations
-**param pos_x_std**: DenseCRF Param (float) (3)
-**param pos_y_std**: DenseCRF Param (float) (3)
-**param pos_z_std**: DenseCRF Param (float) (3)
-**param pos_w**: DenseCRF Param (float) (3)
-**param bilateral_x_std**: DenseCRF Param (float) (60)
-**param bilateral_y_std**: DenseCRF Param (float) (60)
-**param bilateral_z_std**: DenseCRF Param (float) (60)
-**param bilateral_intensity_std**: DenseCRF Param (float) (20)
-**param bilateral_w**: DenseCRF Param (float) (10)
-**param dynamic_z**: Auto adjust z-params by image shape (bool) (False)
-**param ignore_memory**: If true, images requiring to much memory are skipped (bool) (False)
-**param verbose**: Print lot's of status information (bool) (False)
+- **param max_iterations**: maximum crf iterations  
+- **param pos_x_std**: DenseCRF Param (float) (3)  
+- **param pos_y_std**: DenseCRF Param (float) (3)  
+- **param pos_z_std**: DenseCRF Param (float) (3)  
+- **param pos_w**: DenseCRF Param (float) (3)  
+- **param bilateral_x_std**: DenseCRF Param (float) (60)  
+- **param bilateral_y_std**: DenseCRF Param (float) (60)  
+- **param bilateral_z_std**: DenseCRF Param (float) (60)  
+- **param bilateral_intensity_std**: DenseCRF Param (float) (20)  
+- **param bilateral_w**: DenseCRF Param (float) (10)  
+- **param dynamic_z**: Auto adjust z-params by image shape (bool) (False)  
+- **param ignore_memory**: If true, images requiring to much memory are skipped (bool) (False)  
+- **param verbose**: Print lot's of status information (bool) (False)  
 
 ```python
 # Now run crf and get hard labeled result tensor:
 result = pro.set_data_and_run(img, feature_tensor)
 ```
 
-**param img**: Normalized input as ndarray. (W, H, D), [0, 1]
-**param label**: Continuous label tensor as ndarray. (W, H, D, L), [0, 1]
-**return**: Hard labeled result as ndarray. (W, H, D), [0, L], dtype=int16
+- **param img**: Normalized input as ndarray. (W, H, D), [0, 1]  
+- **param label**: Continuous label tensor as ndarray. (W, H, D, L), [0, 1]  
+- **return**: Hard labeled result as ndarray. (W, H, D), [0, L], dtype=int16  
