@@ -2,17 +2,17 @@ __author__ = 'Marc Bickel, modified by Jacky Ko'
 
 import numpy as np
 import psutil
-from ctypes import *
-from sys import platform
+# from ctypes import *
+# from sys import platform
 
-if platform == "linux" or platform == "linux2":
-  di_lib = 'lib/dense_inference.so'
-elif platform == "win32":
-  di_lib = 'lib/dense_inference.dll'
+# if platform == "linux" or platform == "linux2":
+  # di_lib = 'lib/dense_inference.so'
+# elif platform == "win32":
+#   di_lib = 'lib/dense_inference.dll'
 
-di = cdll.LoadLibrary(di_lib)
+# di = cdll.LoadLibrary(di_lib)
 
-# from denseinference.lib import dense_inference as di
+from denseinference.lib import dense_inference as di
 
 class CRF3DProcessor(object):
     # #
