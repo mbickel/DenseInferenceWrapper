@@ -10,7 +10,7 @@ endif()
 set(CMAKE_BUILD_TYPE Release)
 
 #python
-SET(Python_ADDITIONAL_VERSIONS 2)
+# SET(Python_ADDITIONAL_VERSIONS 3)
 FIND_PACKAGE(PythonInterp REQUIRED)
 find_package(PythonLibs REQUIRED)
 include_directories(${PYTHON_INCLUDE_DIRS})
