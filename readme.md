@@ -44,7 +44,7 @@ sudo pip install .
 ```
 
 #### Installation (Tested on Windows with MSVC2015)
-
+```
 1. Create a build folder anywhere
 2. CMake with specifying source and build folder
 3. Configure (Python, Boost, Numpy)
@@ -55,6 +55,7 @@ sudo pip install .
 8. Open CMD at <source-folder>
 9. pip install . (Permission error will occur if .sln file is open)
 10. Copy boost_python-vc140-mt-1_64.dll at <boost-dir>/lib64-msvc-14.0 to <python-dir>/Lib/site-packages/denseinference
+```
 
 ## Usage
 
