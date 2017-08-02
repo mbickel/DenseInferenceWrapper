@@ -8,5 +8,10 @@
 *.o
 *.so
 *.a
+*.dll
+*.lib
 
 *~
+
+/build
+/python

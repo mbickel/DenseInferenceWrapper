@@ -1,7 +1,7 @@
 # update the path variables 
 
 CC	= g++
-CFLAGS	= -W -Wall -O2 -DNDEBUG
+CFLAGS	= -W -Wall -O2 -DNDEBUG	
 #CFLAGS	= -W -Wall -g
 LIB_ROOT = denseinference/lib/
 

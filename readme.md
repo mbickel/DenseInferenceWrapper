@@ -35,13 +35,26 @@ numpy, psutil
 matplotlib
 ```
 
-#### Installation
+#### Installation (Linux)
 
 ```bash
 cd denseinferencewrapper
 make all
 sudo pip install .
 ```
+
+#### Installation (Tested on Windows with MSVC2015)
+
+1. Create a build folder anywhere
+2. CMake with specifying source and build folder
+3. Configure (Python, Boost, Numpy)
+4. Generate
+5. Open .sln file in build folder
+6. Build Release version
+7. Copy <build-folder>/build/denseinference/lib/refine_3d/Release/dense_inference.dll to <source-folder>/denseinference
+8. Open CMD at <source-folder>
+9. pip install . (Permission error will occur if .sln file is open)
+10. Copy boost_python-vc140-mt-1_64.dll at <boost-dir>/lib64-msvc-14.0 to <python-dir>/Lib/site-packages/denseinference
 
 ## Usage
 
