@@ -22,7 +22,7 @@ for more information.
 #### Requirements
 
 ```
-make, g++, boost-python
+make, g++, boost-python, cmake
 ```
 
 #### Requirements Python
