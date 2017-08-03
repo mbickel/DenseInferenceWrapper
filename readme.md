@@ -22,7 +22,7 @@ for more information.
 #### Requirements
 
 ```
-make, g++, boost-python, cmake, python 2 (python 3 has been tested with compliation fail), MSVC2015 (for windows)
+make, g++, boost-python, cmake, python 2 (python 3 has been tested with compilation fail), MSVC2015 (for windows)
 ```
 
 #### Requirements Python
