@@ -1,10 +1,9 @@
-__author__ = 'Marc Bickel'
+__author__ = 'Marc Bickel, modified by Jacky Ko'
 
 import numpy as np
 import psutil
 
 from denseinference.lib import dense_inference as di
-
 
 class CRF3DProcessor(object):
     # #

@@ -4,9 +4,15 @@
 .settings
 
 *.pyc
+*.pyd
 
 *.o
 *.so
 *.a
+*.dll
+*.lib
 
 *~
+
+/build
+/python
