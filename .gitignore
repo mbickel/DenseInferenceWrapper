@@ -4,6 +4,7 @@
 .settings
 
 *.pyc
+*.pyd
 
 *.o
 *.so

@@ -54,11 +54,12 @@ sudo pip install .
 		1. Open .sln file in build folder
 		2. Build Release version
 		3. Copy <build-folder>/build/denseinference/lib/refine_3d/Release/dense_inference.dll (.so for linux) to <source-folder>/denseinference/lib
+		4. Rename the extension from .dll/.so to .pyd
 	- Linux
 		(To be updated...)
 8. Open CMD/Terminal at <source-folder>
 9. pip install . (Permission error will occur if .sln file is open)
-10. Copy boost_python-vc140-mt-1_64.dll (.so for linux) at <boost-dir>/lib64-msvc-14.0 to <python-dir>/Lib/site-packages/denseinference
+10. Copy boost_python-vc140-mt-1_64.dll (.so for linux) at <boost-dir>/lib64-msvc-14.0 to <python-dir>/Lib/site-packages/denseinference/lib
 ```
 
 ## Usage

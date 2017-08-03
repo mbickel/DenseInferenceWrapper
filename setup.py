@@ -1,10 +1,7 @@
 from setuptools import setup, find_packages
 from sys import platform
 
-if platform == "linux" or platform == "linux2":
-	package_data = 'lib/dense_inference.so'
-elif platform == "win32":
-    package_data = 'lib/dense_inference.dll'
+package_data = 'lib/dense_inference.pyd'
 
 setup(
     name="DenseInferenceWrapper",
