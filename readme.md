@@ -82,14 +82,13 @@ If you want to use this in `python3` then you can follow the following steps
 
 #### Requirements
 
-```
-make, g++, boost-python3.5
+```make, g++, boost-python3.5
 ```
 
 ### Installation of Boost for Python3
 
 
-#####Install python 3.5 :
+#### Install python 3.5 :
 ```sudo apt-get install python3-dev
 ```
 
@@ -98,15 +97,14 @@ make, g++, boost-python3.5
 ```sudo apt-get install libboost-python-dev
 ```
 
-#####Download the lastest version of Boost from http://www.boost.org/
+### Download the lastest version of Boost from http://www.boost.org/
 
-#####Run bootstrap with correct flags :
+### Run bootstrap with correct flags :
 ```./bootstrap.sh --with-python=python3.5
 ```
 
-#####Compile Boost in directory :
+### Compile Boost in directory :
 ```./b2
 ```
 
-#####Update the Makefile to take the new boost locations (Already did)
- 
+### Update the Makefile to take the new boost locations (Already did)
