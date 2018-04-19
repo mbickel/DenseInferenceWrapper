@@ -125,7 +125,7 @@ class CRF3DProcessor(object):
         :param label: Continuous label tensor as ndarray. (W, H, D, L), [0, 1]
         :return: Hard labeled result as ndarray. (W, H, D), [0, L], dtype=int16
         """
-        if (type(img).__module__ != np.__name__) or (type(label).__module__ != np.__name__):
+        if (type(img).__module__[:5] != np.__name__) or (type(label).__module__[:5] != np.__name__):
             raise ValueError('Error. Ndarray expected. Image: (W, H, D), [0, 1]; Label: (W, H, D, L), [0, 1].')
 
         if img.ndim != 3:
