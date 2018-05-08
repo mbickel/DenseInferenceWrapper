@@ -423,7 +423,7 @@ void DenseCRF2DProcessor::set_feature(boost::python::numeric::array feature, int
 		for (int j = 0; j < feat_col; j++) {
 			for (int i = 0; i < feat_row; i++) {
 				for (int c = 0; c < feat_channel; c++) {
-					feat_[(feat_col*feat_row + j * feat_row + i)*feat_channel + c] = (float)extract<double>(in[make_tuple(i, j, c)]);
+					feat_[(j * feat_row + i) * feat_channel + c] = (float)extract<double>(in[make_tuple(i, j, c)]);
 				}
 			}
 		}
@@ -453,7 +453,7 @@ void DenseCRF2DProcessor::set_image(boost::python::numeric::array image, int img
 		img_ = new float[img_row * img_col];
 		for (int j = 0; j < img_col; j++) {
 			for (int i = 0; i < img_row; i++) {
-				img_[img_row + j * img_row + i] = ((float)extract<double>(in[make_tuple(i, j)])) * 255.0f;
+				img_[j * img_row + i] = ((float)extract<double>(in[make_tuple(i, j)])) * 255.0f;
 			}
 		}
 	}

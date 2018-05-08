@@ -279,7 +279,7 @@ class CRF2DProcessor(object):
       raise ValueError('Error. 3d tensor expected. Got: ' + str(label.ndim))
 
     # check image to label shape consistency
-    if (img.shape[0] != label.shape[0]) or (img.shape[1] != label.shape[1]) or (img.shape[2] != label.shape[2]):
+    if (img.shape[0] != label.shape[0]) or (img.shape[1] != label.shape[1]):
       raise ValueError('Error. Image shape and label shape inconsistent: ' +
                str(img.shape) + ', ' + str(label.shape))
 
