@@ -1,5 +1,6 @@
 ## 2D-denseCRF python wrapper
-Here's a 2D-denseCRF wrapper.
+Here's a 2D-denseCRF wrapper written by Wendong Xu
+Any question please connect kirai [dot] wendong [at] gmail [dot] com
 
 # Dense Inference Wrapper
 
