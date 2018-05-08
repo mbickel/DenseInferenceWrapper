@@ -9,18 +9,18 @@
 #include <boost/python.hpp>
 
 struct InputData3D {
-  int MaxIterations;
-  float PosXStd;
-  float PosYStd;
-  float PosZStd;
-  float PosW;
-  float BilateralXStd;
-  float BilateralYStd;
-  float BilateralZStd;
-  float BilateralGStd; // gray
-  float BilateralW;
+	int MaxIterations;
+	float PosXStd;
+	float PosYStd;
+	float PosZStd;
+	float PosW;
+	float BilateralXStd;
+	float BilateralYStd;
+	float BilateralZStd;
+	float BilateralGStd; // gray
+	float BilateralW;
 
-  void print_settings(void);
+	void print_settings(void);
 };
 
 class DenseCRF3DProcessor {
@@ -76,6 +76,60 @@ public:
 
   // wrapper for python to return the calculated map as numpy array
   PyObject* calc_res_array(void);
+};
+
+
+struct InputData2D {
+	int MaxIterations;
+	float PosXStd;
+	float PosYStd;
+	float PosW;
+	float BilateralXStd;
+	float BilateralYStd;
+	float BilateralGStd; // gray
+	float BilateralW;
+
+	void print_settings(void);
+};
+
+class DenseCRF2DProcessor {
+protected:
+	InputData2D inp_;
+
+	bool verb_ = false;
+
+	float *unary_2d_ = NULL;
+	float *feat_ = NULL;
+	float *img_ = NULL;
+	short *map_ = NULL;
+
+	int feat_row_, feat_col_, feat_channel_;
+	int img_row_, img_col_;
+
+	PyObject* stdVecToPyListShort(const std::vector<short>& vec);
+	PyObject* stdVecToPyListFloat(const std::vector<float>& vec);
+
+	void calc_unary(float * unary, float * feat, int feat_row, int feat_col, int feat_channel);
+
+	void tidy_up(void);
+
+public:
+	DenseCRF2DProcessor();
+	DenseCRF2DProcessor(int MaxIterations, float PosXStd, float PosYStd, float PosW, float BilateralXStd, float BilateralYStd, float BilateralGStd, float BilateralW, bool verbose);
+	~DenseCRF2DProcessor();
+
+	void set_feature(boost::python::numeric::array feature, int feat_row, int feat_col, int feat_channel, const std::string &numpy_data_type);
+	PyObject* get_feature();
+
+	void set_image(boost::python::numeric::array image, int img_row, int img_col, const std::string &numpy_data_type);
+	PyObject* get_image();
+
+	void calculate_map(std::vector<short> &v_map);
+
+	static long get_memory_requirements(const int W, const int H, const int C);
+
+	PyObject* calc_res_array(void);
+
 };
 
 #endif
